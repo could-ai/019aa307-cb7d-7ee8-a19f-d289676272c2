@@ -65,9 +65,9 @@ class ProfileScreen extends StatelessWidget {
                   ],
                 ),
               ),
-              const SliverPersistentHeader(
+              SliverPersistentHeader(
                 delegate: _SliverAppBarDelegate(
-                  TabBar(
+                  const TabBar(
                     indicatorColor: Colors.pinkAccent,
                     tabs: [
                       Tab(icon: Icon(Icons.grid_on)),
