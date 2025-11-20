@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:couldai_user_app/screens/feed_screen.dart';
 import 'package:couldai_user_app/screens/create_content_screen.dart';
 import 'package:couldai_user_app/screens/profile_screen.dart';
+import 'package:couldai_user_app/screens/discover_screen.dart';
+import 'package:couldai_user_app/screens/inbox_screen.dart';
 
 class MainNavScreen extends StatefulWidget {
   const MainNavScreen({super.key});
@@ -15,16 +17,13 @@ class _MainNavScreenState extends State<MainNavScreen> {
 
   final List<Widget> _screens = [
     const FeedScreen(), // Watch
-    const Center(child: Text("Discover")), // Placeholder
+    const DiscoverScreen(), // Discover
     const CreateContentScreen(), // Create
-    const Center(child: Text("Inbox")), // Placeholder
+    const InboxScreen(), // Inbox
     const ProfileScreen(), // Profile
   ];
 
   void _onItemTapped(int index) {
-    // If "Create" is tapped (index 2), we might want to show it differently, 
-    // but for now we just switch tabs or push a modal.
-    // Let's treat it as a tab for simplicity in this version.
     setState(() {
       _selectedIndex = index;
     });
